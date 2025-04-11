@@ -1,0 +1,4 @@
+common -s
+common --verbose_failures
+common --android_platforms=//:arm64-v8a
+common --platforms=//:arm64-v8a

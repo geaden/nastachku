@@ -1,0 +1,14 @@
+module(
+    name = "hellostachka",
+    version = "1.0",
+)
+
+bazel_dep(name = "platforms", version = "0.0.10")
+bazel_dep(name = "rules_cc", version = "0.0.17")
+bazel_dep(name = "rules_android_ndk", version = "0.1.2")
+
+android_ndk_repository_extension = use_extension("@rules_android_ndk//:extension.bzl", "android_ndk_repository_extension")
+android_ndk_repository_extension.configure(api_level = 26)
+use_repo(android_ndk_repository_extension, "androidndk")
+
+register_toolchains("@androidndk//:all")

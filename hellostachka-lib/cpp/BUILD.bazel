@@ -1,0 +1,22 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+
+cc_library(
+    name = "hellostachka_lib",
+    srcs = [
+        "hello_stachka.cpp",
+    ],
+    hdrs = [
+        "hello_stachka.h",
+    ],
+    copts = [
+        "-std=c++20",
+    ],
+    linkopts = [
+        "-Wl",
+        "-ldl",
+        "-z",
+        "max-page-size=16384",
+        "-lc++_static",
+        "-llog",
+    ],
+)

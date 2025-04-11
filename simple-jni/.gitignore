@@ -1,0 +1,4 @@
+!/build/generated/jni/includes/*.h
+/build
+/.cxx
+/externalBuild

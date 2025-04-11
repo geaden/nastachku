@@ -1542,7 +1542,7 @@ def GetScriptName():
     script_components = os.path.abspath(__file__).split(os.path.sep)
     base_index = 0
     for idx, value in enumerate(script_components):
-        if value in ('base', 'third_party', 'yandex_io'):
+        if value in ('base', 'third_party', 'work'):
             base_index = idx
             break
     return os.sep.join(script_components[base_index:])

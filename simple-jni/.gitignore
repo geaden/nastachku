@@ -1,4 +1,10 @@
-!/build/generated/jni/includes/*.h
-/build
+build/*
+!build/generated/
+build/generated/*
+!build/generated/jni/
+build/generated/jni/*
+!build/generated/jni/includes/
+build/generated/jni/includes/*
+!build/generated/jni/includes/*.h
 /.cxx
 /externalBuild
